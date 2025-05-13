@@ -9,5 +9,7 @@ package Colecciones;
  * @author Manuel Rodriguez
  */
 public enum TipoInstrumento {
-    
+    PERCUSION,
+    VIENTO,
+    CUERDA;
 }

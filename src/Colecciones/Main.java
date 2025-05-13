@@ -6,8 +6,11 @@ package Colecciones;
 
 /**
  *
- * @author PC
+ * @author Manuel Rodriguez
  */
 public class Main {
-    
+    public static void main(String[] args) {
+        System.out.println("Hola mundo");
+    }
+   
 }
