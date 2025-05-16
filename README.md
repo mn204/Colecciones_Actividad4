@@ -30,6 +30,8 @@ Una fábrica de instrumentos musicales posee una lista con todas sus sucursales.
 
 1.  Desarrollar el diagrama de clases UML que modele lo enunciado y donde consten las clases con sus atributos, métodos y relaciones (los constructores pueden omitirse).
 
+![Diagrama](Diagrama_Colecciones_Actividad4.png)
+
 2.  Crear un proyecto en Java que resuelva:
     * **A)** La explotación del método `listarInstrumentos` que muestre en la consola todos los datos de cada uno de los instrumentos.
     * **B)** La explotación del método `instrumentosPorTipo` que devuelva una lista de instrumentos cuyo tipo coincida con el recibido por parámetro.
