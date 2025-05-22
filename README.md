@@ -1,5 +1,5 @@
 # Colecciones - Actividad 4
-
+🌟 En este ejercicio práctico, trabajaremos con ArrayList en Java ☕ desde el análisis del enunciado 📄 hasta la implementación del código 💻. Aprenderemos a identificar clases a partir de un problema 💡, trasladarlas a un diagrama UML 📊 y luego codificar métodos clave para la manipulación de listas en Java 🧩
 ## Conceptos Aplicados
 
 * Clases y Objetos
