@@ -33,7 +33,51 @@ Una fábrica de instrumentos musicales posee una lista con todas sus sucursales.
 ![Diagrama](Diagrama_Colecciones_Actividad4.png)
 
 2.  Crear un proyecto en Java que resuelva:
-    * **A)** La explotación del método `listarInstrumentos` que muestre en la consola todos los datos de cada uno de los instrumentos.
-    * **B)** La explotación del método `instrumentosPorTipo` que devuelva una lista de instrumentos cuyo tipo coincida con el recibido por parámetro.
-    * **C)** La explotación del método `borrarInstrumento` que reciba un ID y elimine el instrumento asociado a tal ID de la sucursal donde se encuentre.
-    * **D)** La explotación del método `porcInstrumentosPorTipo` que reciba el nombre de una sucursal y retorne los porcentajes de instrumentos por tipo que hay para tal sucursal.
+    
+* **A)** La explotación del método `listarInstrumentos` que muestre en la consola todos los datos de cada uno de los instrumentos.
+    
+```java
+public void listarInstrumentos() {
+    for (Sucursal sucursal : sucursales) {
+        System.out.println(sucursal.getNombre());
+        sucursal.listarInstrumentos();
+    }
+}
+```
+
+* **B)** La explotación del método `instrumentosPorTipo` que devuelva una lista de instrumentos cuyo tipo coincida con el recibido por parámetro.
+
+```java
+public ArrayList<Instrumento> instrumentosPorTipo(TipoInstrumento tipo) {
+    ArrayList<Instrumento> instEncontrados = new ArrayList<>();
+    for (Instrumento instrumento : instrumentos) {
+        if (instrumento.getTipo() == tipo) {
+            instEncontrados.add(instrumento);
+        }
+    }
+    return instEncontrados;
+}
+```
+
+* **C)** La explotación del método `borrarInstrumento` que reciba un ID y elimine el instrumento asociado a tal ID de la sucursal donde se encuentre.
+
+```java
+public Instrumento borrarInstrumento(String ID) {
+    Instrumento insABorrar = buscarInstrumento(ID);
+    this.instrumentos.remove(insABorrar);
+    return insABorrar;
+}
+```
+
+* **D)** La explotación del método `porcInstrumentosPorTipo` que reciba el nombre de una sucursal y retorne los porcentajes de instrumentos por tipo que hay para tal sucursal.
+
+```java
+public double[] porcInstrumentosPorTipo(String nombreSuc) {
+    double[] porcentajes = new double[TipoInstrumento.values().length];
+    Sucursal sucEncontrada = buscarSucursal(nombreSuc);
+    if (sucEncontrada != null) {
+        porcentajes = sucEncontrada.porcInstrumentosPorTipo();
+    }
+    return porcentajes;
+}
+```
